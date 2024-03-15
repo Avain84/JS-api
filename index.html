@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/styles/output.css" />
+  </head>
+  <body class="bg-blue-nba pt-10">
+    <header>
+      <div class="container">
+        <h1
+          class="bg-white rounded-lg text-red-nba text-4xl md:text-5xl lg:text-6xl font-bold p-5 text-center"
+        >
+          NBA 球隊 / 球員資料
+        </h1>
+      </div>
+    </header>
+    <main class="pt-10">
+      <div
+        class="container py-3 border-8 border-white border-double rounded-lg"
+      >
+        <form class="p-10">
+          <label for="teamselect" class="block text-white text-2xl mb-10">
+            NBA 球隊列表 &rarr;
+            <select name="" id="teamselect" class="text-blue-nba">
+              <option value="">請選擇</option>
+            </select>
+          </label>
+          <label for="playerName" class="block text-white text-2xl">
+            NBA 球員名稱 &rarr;
+            <input
+              type="text"
+              id="playerName"
+              class="player-name text-blue-nba w-40"
+            />
+            <button
+              type="submit"
+              class="search bg-red-nba ml-3 rounded-xl px-3 py-1"
+            >
+              搜尋球員
+            </button>
+            <div class="players hidden pt-5">
+              &nbsp;含此名稱球員 &rarr;
+              <select name="" class="player-select text-blue-nba">
+                <option value="">請選擇</option>
+              </select>
+            </div>
+          </label>
+        </form>
+        <section class="team hidden p-10 bg-red-nba text-white">
+          <h2 class="h2text text-2xl font-bold"></h2>
+          <ul>
+            <li>球隊全名：<span class="full_name text-xl"></span></li>
+            <li>球隊縮寫：<span class="abbreviation text-xl"></span></li>
+            <li>所在城市：<span class="city text-xl"></span></li>
+            <li>所在聯盟：<span class="conference text-xl"></span></li>
+            <li>聯盟分組：<span class="division text-xl"></span></li>
+          </ul>
+        </section>
+        <section class="player hidden p-10 bg-red-nba text-white">
+          <h2 class="player_name text-2xl font-bold">球員姓名</h2>
+          <ul>
+            <li>所在球隊：<span class="player_team"></span></li>
+            <li>背號：<span class="player_number"></span></li>
+            <li>身高(英尺)：<span class="player_height"></span></li>
+            <li>體重(英磅)：<span class="player_weight"></span></li>
+            <li>位置：<span class="player_position"></span></li>
+            <li>畢業大學：<span class="player_college"></span></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./src/scripts/all.js"></script>
+  </body>
+</html>
